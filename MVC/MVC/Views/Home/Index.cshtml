@@ -1,0 +1,13 @@
+﻿@model MVC.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <form asp-controller="Home" asp-action="Index" method="post">
+        <ul>
+            <li>@Html.EditorFor(m => m.Username, new { htmlAttributes = new { @class = "form-control", @placeholder = "username" } })</li>
+            <li>@Html.EditorFor(m => m.Password, new { htmlAttributes = new { @class = "form-control", @placeholder = "password" } })</li>
+            <li><input type="submit" name="submit"/></li>
+        </ul>
+    </form>

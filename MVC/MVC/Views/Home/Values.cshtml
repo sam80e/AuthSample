@@ -1,0 +1,20 @@
+﻿@model MVC.Models.ValuesModel
+@{
+    ViewData["Title"] = "Values";
+}
+
+<h1>Values</h1>
+@if (Model.Values != null && Model.Values.Count > 0)
+{
+    <ul>
+        @foreach (var item in Model.Values)
+        {
+            <li class="bg-info">@item.ToString();</li>
+        }
+    </ul>
+}
+else
+{
+    <div>no values</div>
+}
+
